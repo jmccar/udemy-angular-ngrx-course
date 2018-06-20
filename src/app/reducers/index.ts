@@ -14,12 +14,17 @@ interface AuthState {
     user: User;
 }
 
+const initialAuthState: AuthState = {
+    loggedIn: false,
+    user: undefined
+};
+
 // this is the app model - properties for each part of the application
 export interface AppState {
     auth: AuthState;
 }
 
-function authReducer(state: AuthState, action): AuthState {
+function authReducer(state: AuthState = initialAuthState, action): AuthState {
     switch (action.type) {
         case AuthActionTypes.LoginAction:
             return {
