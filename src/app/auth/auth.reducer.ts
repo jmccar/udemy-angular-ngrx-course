@@ -19,12 +19,14 @@ export function reducer(
     switch (action.type) {
         case AuthActionTypes.LoginAction:
             return {
+                ...state,
                 loggedIn: true,
                 user: action.payload.user
             };
         case AuthActionTypes.LogoutAction:
             // could be initialState
             return {
+                ...state,
                 loggedIn: false,
                 user: undefined
             };
