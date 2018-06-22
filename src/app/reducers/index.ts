@@ -10,11 +10,9 @@ import { User } from '../model/user.model';
 import { AuthActionTypes } from '../auth/auth.actions';
 
 // this is the app model - properties for each part of the application
-export interface AppState {
-}
+export interface AppState { }
 
-export const reducers: ActionReducerMap<AppState> = {
-};
+export const reducers: ActionReducerMap<AppState> = {};
 
 export const metaReducers: MetaReducer<AppState>[] = !environment.production
     ? []
